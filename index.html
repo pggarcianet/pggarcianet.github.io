@@ -13,7 +13,22 @@
 
     function test()
     {
-        alert("Test 123");
+        //alert("Test 123");
+
+        var options = {
+            headers: {
+                'Content-Type': 'application/json',
+                'ClientId': '5NJUAj*RE3|4QSY',
+                'ApiKey': 'pga7QzFHJx4w46fI~8Hzi4RvtTwlNEp'
+            },
+            method: 'GET',
+            mode: 'cors',
+        }
+
+        fetch('https://5792-161-22-24-14.sa.ngrok.io/api/lead/get-business-types-optionset', options)
+            .then(response => response.json())
+            .then(data => console.log(data));
+
     }
 
 </script>
